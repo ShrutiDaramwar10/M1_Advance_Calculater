@@ -1,0 +1,1 @@
+void equation(double   , double  ,double );

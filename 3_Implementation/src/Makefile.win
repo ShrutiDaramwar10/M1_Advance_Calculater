@@ -1,0 +1,61 @@
+# Project: Advance Calculater
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Addition.o Substraction.o Multiplication.o Division.o Factorial.o Modulus.o Power.o Derivatives.o Integration.o Equation.o "Base\ Conversion.o"
+LINKOBJ  = main.o Addition.o Substraction.o Multiplication.o Division.o Factorial.o Modulus.o Power.o Derivatives.o Integration.o Equation.o "Base Conversion.o"
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = "Advance Calculater.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+Addition.o: Addition.c
+	$(CC) -c Addition.c -o Addition.o $(CFLAGS)
+
+Substraction.o: Substraction.c
+	$(CC) -c Substraction.c -o Substraction.o $(CFLAGS)
+
+Multiplication.o: Multiplication.c
+	$(CC) -c Multiplication.c -o Multiplication.o $(CFLAGS)
+
+Division.o: Division.c
+	$(CC) -c Division.c -o Division.o $(CFLAGS)
+
+Factorial.o: Factorial.c
+	$(CC) -c Factorial.c -o Factorial.o $(CFLAGS)
+
+Modulus.o: Modulus.c
+	$(CC) -c Modulus.c -o Modulus.o $(CFLAGS)
+
+Power.o: Power.c
+	$(CC) -c Power.c -o Power.o $(CFLAGS)
+
+Derivatives.o: Derivatives.c
+	$(CC) -c Derivatives.c -o Derivatives.o $(CFLAGS)
+
+Integration.o: Integration.c
+	$(CC) -c Integration.c -o Integration.o $(CFLAGS)
+
+Equation.o: Equation.c
+	$(CC) -c Equation.c -o Equation.o $(CFLAGS)
+
+"Base\ Conversion.o": Base\ Conversion.c
+	$(CC) -c "Base Conversion.c" -o "Base Conversion.o" $(CFLAGS)
