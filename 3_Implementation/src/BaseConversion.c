@@ -1,4 +1,6 @@
-void baseconversion(char s[20],int b1,int b2)
+#include <stdio.h>
+#include <string.h>
+void baseconversion(char *s,int b1,int b2)
 {
     int count=0,r,digit,i,n=0,b=1;
     for(i=strlen(s)-1;i>=0;i--)

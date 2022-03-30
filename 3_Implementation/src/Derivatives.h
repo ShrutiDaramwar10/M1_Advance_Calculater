@@ -1,1 +1,1 @@
-int derivative(float , float  ,float );
+float derivative(float , float  ,float );

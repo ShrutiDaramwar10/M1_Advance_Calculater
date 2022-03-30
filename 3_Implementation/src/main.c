@@ -11,13 +11,13 @@
 #include "Derivatives.h"
 #include "Integration.h"
 #include "Equation.h"
-#include "Base Conversion.h"
+#include "BaseConversion.h"
 
 
 int main(int argc, char *argv[]) {
 	 int choice; 
 	 int n1,n2, ans=0;
-	 float c , x,n ;
+	 float c , x,n ,result;
  	  double a,b,integral;
 	   double  z;
 	    char s[20];
@@ -94,8 +94,8 @@ int main(int argc, char *argv[]) {
 	  scanf("%f",&x);
 	  printf("Enter the power value\n");
 	  scanf("%f",&n);
-	  ans = derivative (c,x,n);
-	  printf("answer=%f",ans);
+	  result = derivative (c,x,n);
+	  printf("answer=%f",result);
       break;
     case 9:
 		
